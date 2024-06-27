@@ -2,9 +2,15 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  template: `
+    <div class="app__container">
+      <p>Форматированный телефон 1: {{ number1 | number: '(###) ###-##-##'}}</p>
+      <p>Форматированный телефон 2: {{ number2 | number: '###-###-##-##'}}</p>
+    </div>
+  `
 })
 export class AppComponent {
-  title = 'EnKodTask6';
+  title: string = 'EnKodTask6';
+  number1: string = '+78005557778';
+  number2: string = '+78005557778';
 }
